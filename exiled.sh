@@ -13,39 +13,38 @@ if test -f "$ThisVerFile"; then
                 rm Exiled.Events.dll
                 rm Exiled.Permissions.dll
                 rm Exiled.Updater.dll
-                mkdir /exiled
-                cd /exiled
+                mkdir /home/container/exiled
+                cd /home/container/exiled
                 tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
                 $tmp
                 tar -zvxf Exiled.tar.gz
                 mkdir /home/container/.config/EXILED/
-                mv /exiled/EXILED/* /home/container/.config/EXILED/
+                mv /home/container/exiled/EXILED/* /home/container/.config/EXILED/
                 if test -f /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll.old; then
                        rm  /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll.old
                 fi
                 mv /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll.old
-                mv /exiled/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed
-                cd /
-                rm -r /exiled
+                mv /home/container/exiled/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed
                 cd
+                rm -r /home/container/exiled/
+                
                 echo "$NewVer" > $ThisVerFile
         fi
 else
-        mkdir /exiled
-        cd /exiled
+        mkdir /home/container/exiled
+        cd /home/container/exiled
         tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
         $tmp
         tar -zvxf Exiled.tar.gz
         mkdir /home/container/.config/EXILED/
-        mv /exiled/EXILED/* /home/container/.config/EXILED/
+        mv /home/container/exiled/EXILED/* /home/container/.config/EXILED/
         if test -f /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll.old; then
                 rm  /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll.old
         fi
         mv /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed/Assembly-CSharp.dll.old
-        mv /exiled/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed
-        cd /
-        rm -r /exiled
-        cd
+        mv /home/container/exiled/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed
+        cd 
+        rm -r /home/container/exiled/
         echo "$NewVer" > $ThisVerFile
 fi
 cd
