@@ -36,7 +36,8 @@ else
         $tmp
         tar -zvxf Exiled.tar.gz
         cd
-        mkdir -p .config/EXILED
+        mkdir .config
+        mkdir .config/EXILED
 
         mv exiled/EXILED/* .config/EXILED/
         if test -f SCPSL_Data/Managed/Assembly-CSharp.dll.old; then
