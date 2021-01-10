@@ -1,5 +1,5 @@
 #!/bin/bash
-/home/container/steamcmd/steamcmd.sh +login anonymous +force_install_dir /mnt/server +app_update 996560 +quit
+/home/container/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/container +app_update 996560 +quit
 NewVer=$(curl https://api.github.com/repos/galaxy119/EXILED/tags?per_page=1 | grep -n "name"|cut -c2-| grep -o '[0-9].[0-9].[0-9][0-9]')
 ThisVerFile=cur.ver
 ThisVer=$(cat $ThisVerFile)
