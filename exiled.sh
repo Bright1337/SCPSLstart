@@ -27,6 +27,7 @@ if test -f "$ThisVerFile"; then
                 mv /exiled/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed
                 cd /
                 rm -r /exiled
+                cd
                 echo "$NewVer" > $ThisVerFile
         fi
 else
@@ -44,7 +45,9 @@ else
         mv /exiled/Assembly-CSharp.dll /home/container/SCPSL_Data/Managed
         cd /
         rm -r /exiled
+        cd
         echo "$NewVer" > $ThisVerFile
 fi
+cd
 $1
 
