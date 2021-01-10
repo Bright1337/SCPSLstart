@@ -18,14 +18,13 @@ if test -f "$ThisVerFile"; then
                 tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
                 $tmp
                 tar -zvxf Exiled.tar.gz
-                mkdir /
+                cd
                 mv exiled/EXILED/* .config/EXILED/
                 if test -f SCPSL_Data/Managed/Assembly-CSharp.dll.old; then
                        rm  SCPSL_Data/Managed/Assembly-CSharp.dll.old
                 fi
                 mv SCPSL_Data/Managed/Assembly-CSharp.dll SCPSL_Data/Managed/Assembly-CSharp.dll.old
                 mv exiled/Assembly-CSharp.dll SCPSL_Data/Managed
-                cd
                 rm -r exiled/
                 
                 echo "$NewVer" > $ThisVerFile
