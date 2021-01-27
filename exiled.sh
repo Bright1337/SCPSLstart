@@ -14,6 +14,7 @@ if test -f "$ThisVerFile"; then
                 rm Exiled.Events.dll
                 rm Exiled.Permissions.dll
                 rm Exiled.Updater.dll
+                cd
                 mkdir exiled
                 cd exiled
                 tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
@@ -31,6 +32,7 @@ if test -f "$ThisVerFile"; then
                 echo "$NewVer" > $ThisVerFile
         fi
 else
+        cd
         mkdir exiled
         cd exiled
         tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
