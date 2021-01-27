@@ -57,12 +57,12 @@ else
         rm -r exiled/
         echo "$NewVer" > $ThisVerFile
 fi
-if shasum Mono.Posix.dll == mono; then
+if shasum Mono.Posix.dll == $mono; then
         echo "Gucci"
 else
         curl -L -O https://github.com/Bright1337/SCPSLstart/releases/download/1.1.1/Mono.Posix.dll
 fi
-if shasum MultiAdmin.exe == multi; then
+if shasum MultiAdmin.exe == $multi; then
         echo "Gucci"
 else
         curl -L -O https://github.com/Bright1337/SCPSLstart/releases/download/1.1.1/MultiAdmin.exe
