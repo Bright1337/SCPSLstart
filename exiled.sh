@@ -21,7 +21,8 @@ if test -f "$ThisVerFile"; then
                 $tmp
                 tar -zvxf Exiled.tar.gz
                 cd
-                mv -v exiled/EXILED/* .config/EXILED/
+                mv exiled/EXILED/* .config/EXILED/
+                rsync - a exiled/EXILED/Plugins/ .config/EXILED/Plugins/
                 
                 if test -f SCPSL_Data/Managed/Assembly-CSharp.dll.old; then
                        rm  SCPSL_Data/Managed/Assembly-CSharp.dll.old
