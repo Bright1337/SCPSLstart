@@ -68,5 +68,4 @@ else
         curl -L -O https://github.com/Bright1337/SCPSLstart/releases/download/1.1.1/MultiAdmin.exe
 fi
 cd
-mono MultiAdmin.exe --port $1
 
