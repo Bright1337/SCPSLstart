@@ -1,6 +1,7 @@
 #!/bin/bash
 steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/container +app_update 996560 +quit
 NewVer=$(curl https://api.github.com/repos/galaxy119/EXILED/tags?per_page=1 | grep -n "name"|cut -c2-| grep -o '[0-9].[0-9].[0-9][0-9]')
+NewVer="2.1.28"
 ThisVerFile=cur.ver
 ThisVer=$(cat $ThisVerFile)
 if test -f "$ThisVerFile"; then
