@@ -19,7 +19,7 @@ if test -f "$ThisVerFile"; then
                 cd
                 mkdir exiled
                 cd exiled
-                tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
+                tmp="curl -L -O https://github.com/Exiled-Team/EXILED/releases/download/$NewVer/Exiled.tar.gz"
                 $tmp
                 tar -zvxf Exiled.tar.gz
                 cd
@@ -41,7 +41,7 @@ else
         cd
         mkdir exiled
         cd exiled
-        tmp="curl -L -O https://github.com/galaxy119/EXILED/releases/download/$NewVer/Exiled.tar.gz"
+        tmp="curl -L -O https://github.com/Exiled-Team/EXILED/releases/download/$NewVer/Exiled.tar.gz"
         $tmp
         tar -zvxf Exiled.tar.gz
         cd
