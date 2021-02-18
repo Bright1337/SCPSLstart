@@ -23,10 +23,11 @@ if test -f "$ThisVerFile"; then
                 $tmp
                 tar -zvxf Exiled.tar.gz
                 cd
-                mv exiled/EXILED/* .config/EXILED/
-                mv exiled/EXILED/Plugins/Exiled.Events.dll .config/EXILED/Plugins/Exiled.Events.dll 
-                mv exiled/EXILED/Plugins/Exiled.Permissions.dll .config/EXILED/Plugins/Exiled.Permissions.dll
-                mv exiled/EXILED/Plugins/Exiled.Updater.dll .config/EXILED/Plugins/Exiled.Updater.dll    
+                mkdir .config/EXILED/Plugins
+                mv exiled/EXILED/Exiled.Loader.dll .config/EXILED
+                mv exiled/EXILED/Plugins/Exiled.Events.dll .config/EXILED/Plugins
+                mv exiled/EXILED/Plugins/Exiled.Permissions.dll .config/EXILED/Plugins
+                mv exiled/EXILED/Plugins/Exiled.Updater.dll .config/EXILED/Plugins
 
                 if test -f SCPSL_Data/Managed/Assembly-CSharp.dll.old; then
                        rm  SCPSL_Data/Managed/Assembly-CSharp.dll.old
